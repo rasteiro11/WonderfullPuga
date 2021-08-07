@@ -54,14 +54,14 @@ void populatePiece(struct piece *p, int left, int right)
 
 void initialize(struct piece p1[])
 {
-    int j = 0;
-    for (int i = 0; i < 28; i++)
+    int t = 0;
+    for (int i = 0; i <= 6; i++)
     {
-        p1[i].left = blueprint[j];
-        j++;
-        p1[i].right = blueprint[j];
-        printPiece(p1[i]);
-        j++;
+        for (int j = i; j <= 6; j++)
+        {
+            populatePiece(&p1[t], i, j);
+            t++;
+        }
     }
 }
 
