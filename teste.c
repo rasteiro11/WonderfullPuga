@@ -27,7 +27,6 @@ int main()
     printf("\n----------------------------\n");
     printAllPieces(p1);
     shuffle(p1);
-    printf("\n----------------------------\n");
     printAllPieces(p1);
 
     return 0;
