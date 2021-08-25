@@ -8,22 +8,9 @@
 
 int main()
 {
+    struct table table = {playerP1, playerP2, left, middle};
+    int o;
     srand(time(0));
-    initialize(pieces);
-    shuffle(pieces);
-    printf("Jogador 1\n");
-    distributeForP1(pieces, &playerP1);
-    printHand(playerP1.hand, playerP1.tamHand);
-    printf("\n-----------------\n");
-    printf("Jogador 2\n");
-    distributeForP2(pieces, &playerP2);
-    printHand(playerP2.hand, playerP2.tamHand);
-    printf("\n-----------------\n");
-    char screen = '1';
-    controller(screen);
-    printf("\n-----------------\n");
-    screen = '2';
-    controller(screen);
-
+    controller(o, table);
     return 0;
 }
